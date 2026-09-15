@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Programmer Simulator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+
+        <div class="logo">
+            <span class="logo-icon">💻</span>
+            Programmer<span class="green">Simulator</span>
+        </div>
+
+        <div class="top-status">
+            <span id="systemStatus">● SYSTEM ONLINE</span>
+            <span id="internetStatus">🌐 Internet: OK</span>
+        </div>
+
+    </header>
+
+
+    <!-- MAIN GAME -->
+    <main class="game-container">
+
+        <!-- TITLE -->
+        <section class="hero">
+
+            <div>
+                <p class="eyebrow">DEVELOPER LIFE SIMULATOR</p>
+
+                <h1>
+                    Fix the bug.
+                    <br>
+                    <span>Probably create another.</span>
+                </h1>
+
+                <p class="description">
+                    Your client wants the website finished today.
+                    Unfortunately, your code has other plans.
+                </p>
+            </div>
+
+            <div class="developer">
+                <div class="developer-head">👨‍💻</div>
+                <div class="developer-body">💻</div>
+            </div>
+
+        </section>
+
+
+        <!-- STATS -->
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+                    <span>🐛</span>
+                    <span>BUGS</span>
+                </div>
+
+                <strong id="bugs">1</strong>
+
+                <small>Currently haunting you</small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+                    <span>☕</span>
+                    <span>COFFEE</span>
+                </div>
+
+                <strong id="coffee">100%</strong>
+
+                <small>Developer fuel</small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+                    <span>🧠</span>
+                    <span>SANITY</span>
+                </div>
+
+                <strong id="sanity">100%</strong>
+
+                <small>Slowly disappearing</small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+                    <span>⭐</span>
+                    <span>SCORE</span>
+                </div>
+
+                <strong id="score">0</strong>
+
+                <small>Professional suffering</small>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECT PROGRESS -->
+        <section class="panel progress-panel">
+
+            <div class="panel-heading">
+
+                <div>
+                    <p class="label">CURRENT PROJECT</p>
+                    <h2>Build a Website</h2>
+                </div>
+
+                <strong id="progressText">0%</strong>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    class="progress-fill"
+                    id="progress"
+                ></div>
+
+            </div>
+
+
+            <div class="progress-info">
+
+                <span>Project started 47 minutes ago</span>
+
+                <span id="projectStatus">
+                    Status: Somehow alive
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- CODE EDITOR -->
+        <section class="panel editor-panel">
+
+            <div class="editor-header">
+
+                <div class="window-buttons">
+
+                    <span class="window red"></span>
+                    <span class="window yellow"></span>
+                    <span class="window green-dot"></span>
+
+                </div>
+
+                <span class="file-name">
+                    main.js
+                </span>
+
+                <span class="saved">
+                    ● Saved
+                </span>
+
+            </div>
+
+
+            <div class="code-area">
+
+                <div class="line">
+
+                    <span class="line-number">1</span>
+
+                    <code>
+                        <span class="purple">function</span>
+                        <span class="blue">buildWebsite</span>() {
+                    </code>
+
+                </div>
+
+
+                <div class="line">
+
+                    <span class="line-number">2</span>
+
+                    <code>
+                        &nbsp;&nbsp;
+                        <span class="purple">const</span>
+                        website =
+                        <span class="yellow">'awesome'</span>;
+                    </code>
+
+                </div>
+
+
+                <div class="line">
+
+                    <span class="line-number">3</span>
+
+                    <code>
+                        &nbsp;&nbsp;
+                        console.log(
+                        <span class="yellow">
+                            'Building website...'
+                        </span>);
+                    </code>
+
+                </div>
+
+
+                <div class="line error">
+
+                    <span class="line-number">4</span>
+
+                    <code>
+                        &nbsp;&nbsp;
+                        website.<span class="red-text">
+                            destroy()
+                        </span>;
+                        <span class="error-icon">❌</span>
+                    </code>
+
+                </div>
+
+
+                <div class="line">
+
+                    <span class="line-number">5</span>
+
+                    <code>
+                        &nbsp;&nbsp;
+                        <span class="purple">return</span>
+                        website;
+                    </code>
+
+                </div>
+
+
+                <div class="line">
+
+                    <span class="line-number">6</span>
+
+                    <code>
+                        }
+                    </code>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIONS -->
+        <section class="actions">
+
+            <button
+                class="button run-button"
+                id="runButton"
+            >
+                ▶ Run Code
+            </button>
+
+
+            <button
+                class="button fix-button"
+                id="fixButton"
+            >
+                🔧 Fix Bug
+            </button>
+
+
+            <button
+                class="button commit-button"
+                id="commitButton"
+            >
+                🚀 Commit
+            </button>
+
+
+            <button
+                class="button coffee-button"
+                id="coffeeButton"
+            >
+                ☕ Drink Coffee
+            </button>
+
+        </section>
+
+
+        <!-- TERMINAL -->
+        <section class="panel terminal-panel">
+
+            <div class="terminal-header">
+
+                <span>TERMINAL</span>
+
+                <button id="clearTerminal">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <div
+                class="terminal"
+                id="terminal"
+            >
+
+                <div class="terminal-line info">
+                    <span>$</span>
+                    npm run dev
+                </div>
+
+                <div class="terminal-line">
+                    Starting development server...
+                </div>
+
+                <div class="terminal-line warning">
+                    ⚠ Warning: Developer has not had enough coffee.
+                </div>
+
+                <div class="terminal-line error-text">
+                    ❌ 1 bug detected.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACHIEVEMENTS -->
+        <section class="panel achievements">
+
+            <div class="achievement-title">
+
+                <div>
+                    <p class="label">ACHIEVEMENTS</p>
+                    <h2>Developer Milestones</h2>
+                </div>
+
+                <span id="achievementCount">
+                    0 / 5
+                </span>
+
+            </div>
+
+
+            <div class="achievement-list">
+
+                <div
+                    class="achievement"
+                    id="achievement1"
+                >
+                    <span>🐛</span>
+
+                    <div>
+                        <strong>Bug Hunter</strong>
+                        <small>Fix your first bug</small>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="achievement"
+                    id="achievement2"
+                >
+                    <span>☕</span>
+
+                    <div>
+                        <strong>Caffeine Powered</strong>
+                        <small>Drink 3 coffees</small>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="achievement"
+                    id="achievement3"
+                >
+                    <span>🚀</span>
+
+                    <div>
+                        <strong>First Commit</strong>
+                        <small>Successfully commit code</small>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="achievement"
+                    id="achievement4"
+                >
+                    <span>🧠</span>
+
+                    <div>
+                        <strong>Still Sane</strong>
+                        <small>Keep sanity above 50%</small>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="achievement"
+                    id="achievement5"
+                >
+                    <span>🏆</span>
+
+                    <div>
+                        <strong>Ship It!</strong>
+                        <small>Reach 100% project progress</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- POPUP -->
+    <div
+        class="popup-overlay"
+        id="popup"
+    >
+
+        <div class="popup">
+
+            <div class="popup-icon" id="popupIcon">
+                💀
+            </div>
+
+            <h2 id="popupTitle">
+                NEW BUG!
+            </h2>
+
+            <p id="popupMessage">
+                You fixed a bug and created another one.
+            </p>
+
+            <button
+                class="popup-button"
+                id="popupClose"
+            >
+                I Understand Nothing
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- GAME OVER -->
+    <div
+        class="popup-overlay"
+        id="gameOver"
+    >
+
+        <div class="popup">
+
+            <div class="popup-icon">
+                💻💀
+            </div>
+
+            <h2>DEVELOPER.EXE CRASHED</h2>
+
+            <p>
+                Your sanity reached 0%.
+                <br><br>
+                The bug won.
+            </p>
+
+            <button
+                class="popup-button"
+                id="restartButton"
+            >
+                🔄 Restart
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
